@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Scale </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Scale ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="scale">Scale</h1>
+
+<h2 id="what-it-is">What it is</h2>
+<p><a class="xref" href="../../api/SxmTools.UILineChart.View.AdvancedSettings.html#SxmTools_UILineChart_View_AdvancedSettings_Scale">Advanced.Scale</a> multiplies every <em>chrome</em> dimension of a chart — line and axis thicknesses, point sizes, offsets, dash widths and text size — and leaves the data alone. The default, <code>1</code>, draws the chrome at exactly the pixels you authored.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>When the chart writes its descriptions and settings into its model, each pixel value is multiplied by <code>Scale</code>; change <code>Scale</code> later and the chart writes them again. Text follows the same rule: a text style's font size is multiplied before it is applied.</p>
+<p>Two situations look similar and are not:</p>
+<ul>
+<li><strong>Embedding</strong> — the chart is authored <em>for</em> the surface it appears on (a game HUD, an editor window). Thicknesses, sizes and offsets are per-chart settings, and every piece of text picks its style by key (see <a href="text-styles.html">Text styles</a>), so you set the values you want and <code>Scale</code> stays <code>1</code>. It is not a shortcut for bigger text: a text style is the place for that, and <code>Scale</code> would drag lines, points and offsets along.</li>
+<li><strong>Mirroring</strong> — a chart is shown as a <em>smaller copy of another chart</em> and must look like the original. Equal pixels in a narrower box read as heavier lines, so the copy needs <code>previewWidth / referenceWidth</code> folded into <code>Scale</code>. This is the one case where a computed value belongs, and <code>Scale</code> is what makes it expressible. The Overview sample does exactly this: <code>LineChartPreviewer</code> copies the runtime chart into the Inspector and into a window and sets each copy's <code>Scale</code> from its own width against the panel's reference resolution (see <code>ComputePreviewScale</code> in <code>Samples/Overview/Runtime/LineChartPreviewer.cs</code>), with a hand-picked readability boost for the narrow Inspector column.</li>
+</ul>
+<h2 id="what-it-is-not">What it is not</h2>
+<p><code>Scale</code> does not compensate for screen resolution. That is the panel's job: with a <code>PanelSettings</code> scale mode such as <em>Scale With Screen Size</em>, UI Toolkit scales the whole visual tree, generated meshes included, and a 2 px line authored against a 1920 reference becomes 4 physical pixels on a 3840 screen without anyone touching <code>Scale</code>. Nor does it change the plotted range — axes and data are untouched.</p>
+<h2 id="apply-it">Apply it</h2>
+<p>The mirroring case — a preview that must keep the original's visual weight:</p>
+<pre><code class="lang-csharp">public static void MirrorAChart(LineChart preview, float previewWidth, float referenceWidth)
+{
+    preview.Advanced.Scale = previewWidth / referenceWidth;
+}
+</code></pre><h2 id="see-also">See also</h2>
+<ul>
+<li><a href="text-styles.html">Text styles</a> — where text size lives; a mirrored copy is the one case where <code>Scale</code> resizes text on the chart itself.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Documentation~/articles/concepts/scale.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

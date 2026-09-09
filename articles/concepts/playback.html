@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Playback </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Playback ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="playback">Playback</h1>
+
+<h2 id="what-it-is">What it is</h2>
+<p>A chart does not necessarily show a dataset all at once. Its <em>fill player</em> reveals a graph's points over time — a finite source fills up and stops, an infinite or Direct one keeps flowing — according to the playback settings in the <a class="xref" href="../../api/SxmTools.UILineChart.View.DataSettings.html">Data</a> group.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>The player ticks. Every tick it adds points to each playing graph:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../../api/SxmTools.UILineChart.View.DataSettings.html#SxmTools_UILineChart_View_DataSettings_Autoplay">Autoplay</a></td>
+<td>start filling on its own when the chart runs in play mode</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/SxmTools.UILineChart.Data.GraphUpdateMode.html">UpdateMode</a></td>
+<td><em>Continuous</em> — points appear tick by tick; <em>Immediate</em> — all at once</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/SxmTools.UILineChart.Data.FillMode.html">FillMode</a></td>
+<td><em>Fixed</em> — <a class="xref" href="../../api/SxmTools.UILineChart.View.DataSettings.html#SxmTools_UILineChart_View_DataSettings_PointsPerTick">PointsPerTick</a> points each tick; <em>Proportional</em> — <a class="xref" href="../../api/SxmTools.UILineChart.View.DataSettings.html#SxmTools_UILineChart_View_DataSettings_PercentPerTick">PercentPerTick</a> of the data each tick</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/SxmTools.UILineChart.View.DataSettings.html#SxmTools_UILineChart_View_DataSettings_TickRate">TickRate</a></td>
+<td><strong>seconds between ticks</strong> — smaller is faster</td>
+</tr>
+</tbody>
+</table>
+<p>From code you drive the same machinery per chart or per graph: <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Play_">Play</a>, <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Stop_">Stop</a>, <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Restart_">Restart</a> (the <code>int</code> overloads take an index into <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>), and <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_IsPlaying_">IsPlaying</a> to tell whether a graph is still filling. <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_RevealFiniteImmediately">RevealFiniteImmediately</a> shows every finite graph in full and skips the animation — it is what the chart does outside play mode so the editor preview is never empty.</p>
+<p>Playback methods need an initialized chart; before <code>Init()</code> they throw.</p>
+<h2 id="what-it-is-not">What it is not</h2>
+<p><code>TickRate</code> is a period, not a frequency: <code>0.05</code> means a tick every 50 ms, twenty ticks a second. And playback is not the same as the points buffer — the buffer caps how many points are <em>kept</em>, playback decides how fast they <em>appear</em>.</p>
+<h2 id="apply-it">Apply it</h2>
+<p>Take manual control: turn autoplay off, choose a fixed fill of two points every 100 ms, then start:</p>
+<pre><code class="lang-csharp">public static void ControlPlayback(LineChart chart)
+{
+    chart.Data.Autoplay = false;
+    chart.Data.UpdateMode = GraphUpdateMode.Continuous;
+    chart.Data.FillMode = FillMode.Fixed;
+    chart.Data.PointsPerTick = 2;
+    chart.Data.TickRate = 0.1f;
+    chart.Play();
+}
+</code></pre><h2 id="see-also">See also</h2>
+<ul>
+<li><a href="datasets-and-data-sources.html">Datasets and data sources</a> — why finite and infinite sources fill differently.</li>
+<li><a href="../code-first/feed-data-at-runtime.html">Feed data at runtime</a> — pushed points go through the same player.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Documentation~/articles/concepts/playback.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,917 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class AxisSettings </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class AxisSettings ">
+    
+    <meta name="description" content="Axis settings: how values are distributed across the axes, how the labels are formatted and shown, and the two axis captions.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SxmTools.UILineChart.View.AxisSettings">
+
+
+
+  <h1 id="SxmTools_UILineChart_View_AxisSettings" data-uid="SxmTools.UILineChart.View.AxisSettings" class="text-break">Class AxisSettings</h1>
+  <div class="markdown level0 summary"><p>Axis settings: how values are distributed across the axes, how the labels are formatted and shown, and the two axis captions.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">AxisSettings</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SxmTools.html">SxmTools</a>.<a class="xref" href="SxmTools.UILineChart.html">UILineChart</a>.<a class="xref" href="SxmTools.UILineChart.View.html">View</a></h6>
+  <h6><strong>Assembly</strong>: SxmTools.UILineChart.View.dll</h6>
+  <h5 id="SxmTools_UILineChart_View_AxisSettings_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlObject]
+public class AxisSettings</code></pre>
+  </div>
+  <h5 id="SxmTools_UILineChart_View_AxisSettings_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A numeric setting outside its allowed range is rejected: the chart logs an error and the setting keeps its current value.</p>
+</div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_AxisDistribution.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.AxisDistribution%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L38">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_AxisDistribution_" data-uid="SxmTools.UILineChart.View.AxisSettings.AxisDistribution*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_AxisDistribution" data-uid="SxmTools.UILineChart.View.AxisSettings.AxisDistribution">AxisDistribution</h4>
+  <div class="markdown level1 summary"><p>How the plotted range is chosen: fixed to a set origin and size, or grown dynamically from the data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public AxisDistributionType AxisDistribution { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Model.AxisDistributionType.html">AxisDistributionType</a></td>
+        <td><p>Defaults to Dynamic.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_AxisVisible.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.AxisVisible%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L123">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_AxisVisible_" data-uid="SxmTools.UILineChart.View.AxisSettings.AxisVisible*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_AxisVisible" data-uid="SxmTools.UILineChart.View.AxisSettings.AxisVisible">AxisVisible</h4>
+  <div class="markdown level1 summary"><p>Which axis value labels are shown: the X row, the Y column, both or neither.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public AxisVisibility AxisVisible { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Model.AxisVisibility.html">AxisVisibility</a></td>
+        <td><p>Defaults to Both.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_FixedAxisOrigin.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.FixedAxisOrigin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L54">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_FixedAxisOrigin_" data-uid="SxmTools.UILineChart.View.AxisSettings.FixedAxisOrigin*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_FixedAxisOrigin" data-uid="SxmTools.UILineChart.View.AxisSettings.FixedAxisOrigin">FixedAxisOrigin</h4>
+  <div class="markdown level1 summary"><p>Bottom-left corner of the plotted range, in data units, used when distribution is fixed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public Vector2 FixedAxisOrigin { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><p>Any point, in data units. Defaults to (0, 0).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_FixedAxisSize.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.FixedAxisSize%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L70">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_FixedAxisSize_" data-uid="SxmTools.UILineChart.View.AxisSettings.FixedAxisSize*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_FixedAxisSize" data-uid="SxmTools.UILineChart.View.AxisSettings.FixedAxisSize">FixedAxisSize</h4>
+  <div class="markdown level1 summary"><p>Width and height of the plotted range, in data units, used when distribution is fixed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public Vector2 FixedAxisSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><p>Width and height in data units, each greater than 0: a point is placed by its distance from the origin divided by the size. Defaults to (1, 1).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_LabelDecimalPlaces.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.LabelDecimalPlaces%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L107">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_LabelDecimalPlaces_" data-uid="SxmTools.UILineChart.View.AxisSettings.LabelDecimalPlaces*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_LabelDecimalPlaces" data-uid="SxmTools.UILineChart.View.AxisSettings.LabelDecimalPlaces">LabelDecimalPlaces</h4>
+  <div class="markdown level1 summary"><p>Number of decimal places shown on the axis value labels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public DecimalPlaces LabelDecimalPlaces { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Model.DecimalPlaces.html">DecimalPlaces</a></td>
+        <td><p>Defaults to _2.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_LabelsOffset.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.LabelsOffset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L89">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_LabelsOffset_" data-uid="SxmTools.UILineChart.View.AxisSettings.LabelsOffset*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_LabelsOffset" data-uid="SxmTools.UILineChart.View.AxisSettings.LabelsOffset">LabelsOffset</h4>
+  <div class="markdown level1 summary"><p>Gap between the axis value labels and the plot, in authored pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public int LabelsOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>0 or more, in authored pixels. Defaults to 8.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_XAxisCaption.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.XAxisCaption%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L155">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_XAxisCaption_" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaption*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_XAxisCaption" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaption">XAxisCaption</h4>
+  <div class="markdown level1 summary"><p>Text of the X axis caption.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public string XAxisCaption { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Any text; shown while <a class="xref" href="SxmTools.UILineChart.View.AxisSettings.html#SxmTools_UILineChart_View_AxisSettings_XAxisCaptionEnabled">XAxisCaptionEnabled</a> is true. Defaults to &quot;X Axis&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_XAxisCaptionAlign.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.XAxisCaptionAlign%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L187">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_XAxisCaptionAlign_" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaptionAlign*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_XAxisCaptionAlign" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaptionAlign">XAxisCaptionAlign</h4>
+  <div class="markdown level1 summary"><p>How the X axis caption aligns along the axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public CaptionAlign XAxisCaptionAlign { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Model.CaptionAlign.html">CaptionAlign</a></td>
+        <td><p>Defaults to End.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_XAxisCaptionEnabled.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.XAxisCaptionEnabled%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L139">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_XAxisCaptionEnabled_" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaptionEnabled*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_XAxisCaptionEnabled" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaptionEnabled">XAxisCaptionEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether the X axis caption is shown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public bool XAxisCaptionEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>Defaults to true.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_XAxisCaptionOffset.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.XAxisCaptionOffset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L171">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_XAxisCaptionOffset_" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaptionOffset*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_XAxisCaptionOffset" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaptionOffset">XAxisCaptionOffset</h4>
+  <div class="markdown level1 summary"><p>Gap between the X axis caption and its labels, in authored pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public int XAxisCaptionOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>Any value, in authored pixels; a larger value moves the caption further from the labels. Defaults to 16.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_XAxisCaptionTextStyleKey.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.XAxisCaptionTextStyleKey%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L203">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_XAxisCaptionTextStyleKey_" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaptionTextStyleKey*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_XAxisCaptionTextStyleKey" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisCaptionTextStyleKey">XAxisCaptionTextStyleKey</h4>
+  <div class="markdown level1 summary"><p>Key of the text style, from the project's TextStylesLibrary, applied to the X axis caption.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public string XAxisCaptionTextStyleKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A key from the project's TextStylesLibrary; an unknown key logs an error and falls back to the library's fallback style. Defaults to &quot;AxisCaption&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_XAxisLabelTextStyleKey.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.XAxisLabelTextStyleKey%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L219">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_XAxisLabelTextStyleKey_" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisLabelTextStyleKey*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_XAxisLabelTextStyleKey" data-uid="SxmTools.UILineChart.View.AxisSettings.XAxisLabelTextStyleKey">XAxisLabelTextStyleKey</h4>
+  <div class="markdown level1 summary"><p>Key of the text style, from the project's TextStylesLibrary, applied to the X axis value labels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public string XAxisLabelTextStyleKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A key from the project's TextStylesLibrary; an unknown key logs an error and falls back to the library's fallback style. Defaults to &quot;AxisLabel&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_YAxisAlign.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.YAxisAlign%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L235">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_YAxisAlign_" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisAlign*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_YAxisAlign" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisAlign">YAxisAlign</h4>
+  <div class="markdown level1 summary"><p>Which side of the plot the Y axis labels and caption sit on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public AxisAlign YAxisAlign { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Model.AxisAlign.html">AxisAlign</a></td>
+        <td><p>Defaults to Left.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_YAxisCaption.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.YAxisCaption%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L267">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_YAxisCaption_" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaption*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_YAxisCaption" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaption">YAxisCaption</h4>
+  <div class="markdown level1 summary"><p>Text of the Y axis caption.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public string YAxisCaption { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Any text; shown while <a class="xref" href="SxmTools.UILineChart.View.AxisSettings.html#SxmTools_UILineChart_View_AxisSettings_YAxisCaptionEnabled">YAxisCaptionEnabled</a> is true. Defaults to &quot;Y Axis&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_YAxisCaptionAlign.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.YAxisCaptionAlign%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L299">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionAlign_" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionAlign*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionAlign" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionAlign">YAxisCaptionAlign</h4>
+  <div class="markdown level1 summary"><p>How the Y axis caption aligns along the axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public CaptionAlign YAxisCaptionAlign { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Model.CaptionAlign.html">CaptionAlign</a></td>
+        <td><p>Defaults to Center.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_YAxisCaptionEnabled.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.YAxisCaptionEnabled%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L251">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionEnabled_" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionEnabled*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionEnabled" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionEnabled">YAxisCaptionEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether the Y axis caption is shown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public bool YAxisCaptionEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>Defaults to true.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_YAxisCaptionOffset.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.YAxisCaptionOffset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L283">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionOffset_" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionOffset*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionOffset" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionOffset">YAxisCaptionOffset</h4>
+  <div class="markdown level1 summary"><p>Gap between the Y axis caption and its labels, in authored pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public int YAxisCaptionOffset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>Any value, in authored pixels; a larger value moves the caption further from the labels. Defaults to 16.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_YAxisCaptionTextStyleKey.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.YAxisCaptionTextStyleKey%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L331">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionTextStyleKey_" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionTextStyleKey*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionTextStyleKey" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionTextStyleKey">YAxisCaptionTextStyleKey</h4>
+  <div class="markdown level1 summary"><p>Key of the text style, from the project's TextStylesLibrary, applied to the Y axis caption.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public string YAxisCaptionTextStyleKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A key from the project's TextStylesLibrary; an unknown key logs an error and falls back to the library's fallback style. Defaults to &quot;AxisCaption&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_YAxisCaptionTwisted.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.YAxisCaptionTwisted%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L315">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionTwisted_" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionTwisted*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_YAxisCaptionTwisted" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisCaptionTwisted">YAxisCaptionTwisted</h4>
+  <div class="markdown level1 summary"><p>Whether the Y axis caption is rotated to read vertically along the axis.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public bool YAxisCaptionTwisted { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p>Defaults to true.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_YAxisLabelTextStyleKey.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.YAxisLabelTextStyleKey%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L347">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_AxisSettings_YAxisLabelTextStyleKey_" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisLabelTextStyleKey*"></a>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_YAxisLabelTextStyleKey" data-uid="SxmTools.UILineChart.View.AxisSettings.YAxisLabelTextStyleKey">YAxisLabelTextStyleKey</h4>
+  <div class="markdown level1 summary"><p>Key of the text style, from the project's TextStylesLibrary, applied to the Y axis value labels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlAttribute]
+public string YAxisLabelTextStyleKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>A key from the project's TextStylesLibrary; an unknown key logs an error and falls back to the library's fallback style. Defaults to &quot;AxisLabel&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_AxisSettings_Changed.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.AxisSettings.Changed%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/Settings/AxisSettings.cs/#L13">View Source</a>
+  </span>
+  <h4 id="SxmTools_UILineChart_View_AxisSettings_Changed" data-uid="SxmTools.UILineChart.View.AxisSettings.Changed">Changed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action Changed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

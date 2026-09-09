@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Add datasets </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Add datasets ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="add-datasets">Add datasets</h1>
+
+<p><strong>Goal:</strong> the chart draws two graphs and one reference line, all described by assets you create in the Project window — still no C#.</p>
+<p><strong>Prerequisites:</strong> a chart in UI Builder (<a href="build-a-chart.html">Build a chart in UI Builder</a>).</p>
+<h2 id="steps">Steps</h2>
+<ol>
+<li>Choose <strong>Assets ▸ Create ▸ UI Line Chart ▸ Graph Description</strong> and name the asset. It is a <a class="xref" href="../../api/SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>: one series, its data source and its line/point styling.</li>
+<li>Select the asset. Under <strong>Data Source</strong> pick a predefined source — start with <strong>Waveform</strong> — and tune it; the Inspector explains each field and shows a formula card for the source. Create a second graph the same way.</li>
+<li><strong>Assets ▸ Create ▸ UI Line Chart ▸ Reference Line Description</strong> makes a <a class="xref" href="../../api/SxmTools.UILineChart.Data.ReferenceLineDescription.html">ReferenceLineDescription</a> for a horizontal marker; set its <em>Y Reference Value</em>.</li>
+<li>Back in UI Builder, select the chart, open the <strong>Data</strong> group (<a class="xref" href="../../api/SxmTools.UILineChart.View.DataSettings.html">DataSettings</a>) and drag your two graph assets into <em>Graphs</em> and the reference line into <em>Reference Lines</em>. The preview draws them.</li>
+<li>Save. The Data group is written with <code>project://</code> references to the assets:</li>
+</ol>
+<pre><code class="lang-xml">&lt;ui:UXML xmlns:ui=&quot;UnityEngine.UIElements&quot; editor-extension-mode=&quot;False&quot;&gt;
+    &lt;SxmTools.UILineChart.View.LineChart name=&quot;line-chart&quot; style=&quot;flex-grow: 1;&quot;&gt;
+        &lt;SxmTools.UILineChart.View.DataSettings graphs=&quot;project://database/Packages/com.sxm-tools.ui-line-chart/Samples/Overview/Data/Measured.asset?fileID=11400000&amp;amp;guid=18203195064ec91439b52ac2ca8f362e&amp;amp;type=2#Measured,project://database/Packages/com.sxm-tools.ui-line-chart/Samples/Overview/Data/Forecast.asset?fileID=11400000&amp;amp;guid=790794a5306e5624985b9cd57bba0309&amp;amp;type=2#Forecast&quot; reference-lines=&quot;project://database/Packages/com.sxm-tools.ui-line-chart/Samples/Overview/Data/Comfort.asset?fileID=11400000&amp;amp;guid=79249e3d05fb2a2448ae2696dc13a2e3&amp;amp;type=2#Comfort&quot;/&gt;
+    &lt;/SxmTools.UILineChart.View.LineChart&gt;
+&lt;/ui:UXML&gt;
+</code></pre><h2 id="result">Result</h2>
+<p>Two series and a horizontal reference line, each named in the legend. Change an asset later — a color, a frequency — and every chart that references it updates, in the editor preview and at runtime.</p>
+<h2 id="next">Next</h2>
+<ul>
+<li><a href="../concepts/datasets-and-data-sources.html">Datasets and data sources</a> — the six sources, Derived chains, and what &quot;cardinality&quot; means for playback.</li>
+<li><a href="../concepts/playback.html">Playback</a> — how the chart reveals a dataset's points over time.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Documentation~/articles/uxml-first/add-datasets.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

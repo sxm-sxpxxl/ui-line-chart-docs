@@ -1,0 +1,1235 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class GraphDescription </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class GraphDescription ">
+    
+    <meta name="description" content="A reusable graph asset: one data series and its line and point styling, from a predefined source or points pushed from code.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SxmTools.UILineChart.Data.GraphDescription">
+
+
+
+  <h1 id="SxmTools_UILineChart_Data_GraphDescription" data-uid="SxmTools.UILineChart.Data.GraphDescription" class="text-break">Class GraphDescription</h1>
+  <div class="markdown level0 summary"><p>A reusable graph asset: one data series and its line and point styling, from a predefined source or points pushed from code.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">Object</span></div>
+    <div class="level2"><span class="xref">ScriptableObject</span></div>
+    <div class="level3"><span class="xref">GraphDescription</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SxmTools.html">SxmTools</a>.<a class="xref" href="SxmTools.UILineChart.html">UILineChart</a>.<a class="xref" href="SxmTools.UILineChart.Data.html">Data</a></h6>
+  <h6><strong>Assembly</strong>: SxmTools.UILineChart.Data.dll</h6>
+  <h5 id="SxmTools_UILineChart_Data_GraphDescription_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[CreateAssetMenu(fileName = &quot;NewGraph&quot;, menuName = &quot;UI Line Chart/Graph Description&quot;, order = 0)]
+public sealed class GraphDescription : ScriptableObject</code></pre>
+  </div>
+  <h5 id="SxmTools_UILineChart_Data_GraphDescription_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A numeric property outside its allowed range is rejected: an error is logged and the property keeps its current value.</p>
+</div>
+  <h3 id="fields">Fields
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_PushedPointsHistoryLimit.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.PushedPointsHistoryLimit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1044">View Source</a>
+  </span>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_PushedPointsHistoryLimit" data-uid="SxmTools.UILineChart.Data.GraphDescription.PushedPointsHistoryLimit">PushedPointsHistoryLimit</h4>
+  <div class="markdown level1 summary"><p>Maximum number of pushed points a Direct graph remembers; older ones drop off.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int PushedPointsHistoryLimit = 256</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>256 points.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_Cardinality.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.Cardinality%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1113">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_Cardinality_" data-uid="SxmTools.UILineChart.Data.GraphDescription.Cardinality*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_Cardinality" data-uid="SxmTools.UILineChart.Data.GraphDescription.Cardinality">Cardinality</h4>
+  <div class="markdown level1 summary"><p>Whether the graph's series ends: Finite for a predefined source with a fixed length, Infinite for an unlimited source or a Direct stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cardinality Cardinality { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.Cardinality.html">Cardinality</a></td>
+        <td><p>Random and Waveform report their own Cardinality setting; Manual, Curve, File and Derived are Finite; a Direct graph is Infinite.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_CurveData.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.CurveData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L667">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_CurveData_" data-uid="SxmTools.UILineChart.Data.GraphDescription.CurveData*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_CurveData" data-uid="SxmTools.UILineChart.Data.GraphDescription.CurveData">CurveData</h4>
+  <div class="markdown level1 summary"><p>Settings for the animation-curve data source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.CurveDataSource CurveData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.CurveDataSource.html">CurveDataSource</a></td>
+        <td><p>Never null; edits to it notify the description the way its own setters do.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_DerivedData.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.DerivedData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L675">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_DerivedData_" data-uid="SxmTools.UILineChart.Data.GraphDescription.DerivedData*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_DerivedData" data-uid="SxmTools.UILineChart.Data.GraphDescription.DerivedData">DerivedData</h4>
+  <div class="markdown level1 summary"><p>Settings for the derived data source, which transforms another graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.DerivedDataSource DerivedData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.DerivedDataSource.html">DerivedDataSource</a></td>
+        <td><p>Never null; edits to it notify the description the way its own setters do.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_FileData.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.FileData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L671">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_FileData_" data-uid="SxmTools.UILineChart.Data.GraphDescription.FileData*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_FileData" data-uid="SxmTools.UILineChart.Data.GraphDescription.FileData">FileData</h4>
+  <div class="markdown level1 summary"><p>Settings for the file (JSON or CSV) data source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.FileDataSource FileData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.FileDataSource.html">FileDataSource</a></td>
+        <td><p>Never null; edits to it notify the description the way its own setters do.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_LineColor.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.LineColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L698">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_LineColor_" data-uid="SxmTools.UILineChart.Data.GraphDescription.LineColor*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_LineColor" data-uid="SxmTools.UILineChart.Data.GraphDescription.LineColor">LineColor</h4>
+  <div class="markdown level1 summary"><p>Color of the graph line.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color LineColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><p>Any color; alpha is respected. Defaults to #FFFFFF.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_LineThickness.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.LineThickness%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L713">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_LineThickness_" data-uid="SxmTools.UILineChart.Data.GraphDescription.LineThickness*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_LineThickness" data-uid="SxmTools.UILineChart.Data.GraphDescription.LineThickness">LineThickness</h4>
+  <div class="markdown level1 summary"><p>Thickness of the graph line, in authored pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LineThickness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>1 or more, in authored pixels. Defaults to 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_ManualData.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.ManualData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L663">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_ManualData_" data-uid="SxmTools.UILineChart.Data.GraphDescription.ManualData*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_ManualData" data-uid="SxmTools.UILineChart.Data.GraphDescription.ManualData">ManualData</h4>
+  <div class="markdown level1 summary"><p>Settings for the manual data source: its hand-entered points.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.ManualDataSource ManualData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.ManualDataSource.html">ManualDataSource</a></td>
+        <td><p>Never null; edits to it notify the description the way its own setters do.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_Mode.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.Mode%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L629">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_Mode_" data-uid="SxmTools.UILineChart.Data.GraphDescription.Mode*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_Mode" data-uid="SxmTools.UILineChart.Data.GraphDescription.Mode">Mode</h4>
+  <div class="markdown level1 summary"><p>Whether the graph's data is predefined (generated from a source) or pushed directly from code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.DataSourceMode Mode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.DataSourceMode.html">DataSourceMode</a></td>
+        <td><p>Defaults to Predefined.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_Name.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.Name%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L683">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_Name_" data-uid="SxmTools.UILineChart.Data.GraphDescription.Name*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_Name" data-uid="SxmTools.UILineChart.Data.GraphDescription.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name that identifies the graph and labels it in the legend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><p>Any text; the legend shows it. Defaults to &quot;New Graph&quot;.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_PointColor.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.PointColor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L792">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_PointColor_" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointColor*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_PointColor" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointColor">PointColor</h4>
+  <div class="markdown level1 summary"><p>Color of the point markers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Color PointColor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Color</span></td>
+        <td><p>Any color; alpha is respected. Defaults to #FFFFFF.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_PointEnabled.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.PointEnabled%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L730">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_PointEnabled_" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointEnabled*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_PointEnabled" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointEnabled">PointEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether a marker is drawn at each data point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ActivityState PointEnabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.ActivityState.html">ActivityState</a></td>
+        <td><p>Defaults to Enabled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_PointFill.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.PointFill%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L745">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_PointFill_" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointFill*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_PointFill" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointFill">PointFill</h4>
+  <div class="markdown level1 summary"><p>Whether the point markers are filled or outlined.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Fill PointFill { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Model.Fill.html">Fill</a></td>
+        <td><p>Defaults to Fill.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_PointOutlineThickness.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.PointOutlineThickness%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L775">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_PointOutlineThickness_" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointOutlineThickness*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_PointOutlineThickness" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointOutlineThickness">PointOutlineThickness</h4>
+  <div class="markdown level1 summary"><p>Outline thickness of the point markers, in authored pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int PointOutlineThickness { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><p>1 or more, in authored pixels. Defaults to 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_PointShape.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.PointShape%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L760">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_PointShape_" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointShape*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_PointShape" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointShape">PointShape</h4>
+  <div class="markdown level1 summary"><p>Shape of the point markers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Shape PointShape { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Model.Shape.html">Shape</a></td>
+        <td><p>Defaults to Circle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_PointSize.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.PointSize%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L807">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_PointSize_" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointSize*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_PointSize" data-uid="SxmTools.UILineChart.Data.GraphDescription.PointSize">PointSize</h4>
+  <div class="markdown level1 summary"><p>Size of the point markers, in authored pixels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float PointSize { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>5 or more, in authored pixels. Defaults to 5.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_PushedPoints.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.PushedPoints%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1059">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_PushedPoints_" data-uid="SxmTools.UILineChart.Data.GraphDescription.PushedPoints*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_PushedPoints" data-uid="SxmTools.UILineChart.Data.GraphDescription.PushedPoints">PushedPoints</h4>
+  <div class="markdown level1 summary"><p>The points pushed to a Direct graph so far, oldest first, up to <a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html#SxmTools_UILineChart_Data_GraphDescription_PushedPointsHistoryLimit">PushedPointsHistoryLimit</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Vector2&gt; PushedPoints { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td><p>Empty until points are pushed; once the limit is reached the oldest point drops off for each new one.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_RandomData.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.RandomData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L659">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_RandomData_" data-uid="SxmTools.UILineChart.Data.GraphDescription.RandomData*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_RandomData" data-uid="SxmTools.UILineChart.Data.GraphDescription.RandomData">RandomData</h4>
+  <div class="markdown level1 summary"><p>Settings for the random-walk data source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.RandomDataSource RandomData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.RandomDataSource.html">RandomDataSource</a></td>
+        <td><p>Never null; edits to it notify the description the way its own setters do.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_SelectedDataSource.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.SelectedDataSource%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L644">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_SelectedDataSource_" data-uid="SxmTools.UILineChart.Data.GraphDescription.SelectedDataSource*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_SelectedDataSource" data-uid="SxmTools.UILineChart.Data.GraphDescription.SelectedDataSource">SelectedDataSource</h4>
+  <div class="markdown level1 summary"><p>Which predefined data source generates the graph's points when the mode is predefined.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.PredefinedDataSource SelectedDataSource { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.PredefinedDataSource.html">PredefinedDataSource</a></td>
+        <td><p>Defaults to Random.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformData.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L679">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformData_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformData*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformData" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformData">WaveformData</h4>
+  <div class="markdown level1 summary"><p>Settings for the waveform data source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.WaveformDataSource WaveformData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.html">WaveformDataSource</a></td>
+        <td><p>Never null; edits to it notify the description the way its own setters do.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_BatchChanges.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.BatchChanges%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L824">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_BatchChanges_" data-uid="SxmTools.UILineChart.Data.GraphDescription.BatchChanges*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_BatchChanges" data-uid="SxmTools.UILineChart.Data.GraphDescription.BatchChanges">BatchChanges()</h4>
+  <div class="markdown level1 summary"><p>Holds the change notification back until the returned scope is disposed, then raises it once if anything changed; wrap several edits in a <code>using</code> block.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDisposable BatchChanges()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></td>
+        <td><p>A scope to dispose when the edits are done.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_ClearPushedPoints.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.ClearPushedPoints%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1094">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_ClearPushedPoints_" data-uid="SxmTools.UILineChart.Data.GraphDescription.ClearPushedPoints*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_ClearPushedPoints" data-uid="SxmTools.UILineChart.Data.GraphDescription.ClearPushedPoints">ClearPushedPoints()</h4>
+  <div class="markdown level1 summary"><p>Removes every pushed point from a Direct graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearPushedPoints()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The graph is not in Direct mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_GetData.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.GetData%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1143">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_GetData_" data-uid="SxmTools.UILineChart.Data.GraphDescription.GetData*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_GetData" data-uid="SxmTools.UILineChart.Data.GraphDescription.GetData">GetData()</h4>
+  <div class="markdown level1 summary"><p>Produces the graph's points: generated from the selected source for a Predefined graph, the points pushed so far for a Direct graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Vector2&gt; GetData()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td><p>The points, oldest first. An empty sequence when the source cannot produce data, i.e. <a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html#SxmTools_UILineChart_Data_GraphDescription_TryValidate_System_String__">TryValidate(out string)</a> fails: a File source without a readable asset, a Derived graph without a source graph, an X range that ends before it starts; the reason is logged as an error.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_NotifyChanged.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.NotifyChanged%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L827">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_NotifyChanged_" data-uid="SxmTools.UILineChart.Data.GraphDescription.NotifyChanged*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_NotifyChanged" data-uid="SxmTools.UILineChart.Data.GraphDescription.NotifyChanged">NotifyChanged()</h4>
+  <div class="markdown level1 summary"><p>Raises the change notification now, for edits the description cannot see itself, such as keys added to the Curve source's AnimationCurve in place; it also goes through an open batch.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NotifyChanged()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_Push_UnityEngine_Vector2_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.Push(UnityEngine.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1064">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_Push_" data-uid="SxmTools.UILineChart.Data.GraphDescription.Push*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_Push_UnityEngine_Vector2_" data-uid="SxmTools.UILineChart.Data.GraphDescription.Push(UnityEngine.Vector2)">Push(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Appends a point to a Direct graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Push(Vector2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to push.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The graph is not in Direct mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_RemovePushedPoint_UnityEngine_Vector2_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.RemovePushedPoint(UnityEngine.Vector2)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1079">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_RemovePushedPoint_" data-uid="SxmTools.UILineChart.Data.GraphDescription.RemovePushedPoint*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_RemovePushedPoint_UnityEngine_Vector2_" data-uid="SxmTools.UILineChart.Data.GraphDescription.RemovePushedPoint(UnityEngine.Vector2)">RemovePushedPoint(Vector2)</h4>
+  <div class="markdown level1 summary"><p>Removes the first pushed point equal to <code class="paramref">point</code> from a Direct graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemovePushedPoint(Vector2 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>The point to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The graph is not in Direct mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_TryValidate_System_String__.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.TryValidate(System.String%40)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1130">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_TryValidate_" data-uid="SxmTools.UILineChart.Data.GraphDescription.TryValidate*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_TryValidate_System_String__" data-uid="SxmTools.UILineChart.Data.GraphDescription.TryValidate(System.String@)">TryValidate(out string)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the selected data source can produce points; unlike <a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html#SxmTools_UILineChart_Data_GraphDescription_GetData">GetData()</a>, a failure is reported only through <code class="paramref">error</code> and nothing is logged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryValidate(out string error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td><span class="parametername">error</span></td>
+        <td><p>On failure, a message describing why; otherwise <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if the source can produce points; otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="SxmTools_UILineChart_Data_GraphDescription_TryValidate_System_String___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Call it after configuring a source from code and before adding the graph to a chart, to show the problem in your own UI. A Direct graph is always valid; a predefined source fails when:</p>
+<ul><li>a File source has no readable asset, or the asset does not match the selected format;</li><li>a Derived source has no source graph, derives from itself or through a chain that loops back, or its source is infinite or invalid itself;</li><li>a Curve source has no keys, or its Sample Size is below 1;</li><li>a finite Random or Waveform source has an X range that ends before it starts, or a Random source has such a Y range.</li></ul>
+</div>
+  <h3 id="events">Events
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_OnPointPushed.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.OnPointPushed%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1049">View Source</a>
+  </span>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_OnPointPushed" data-uid="SxmTools.UILineChart.Data.GraphDescription.OnPointPushed">OnPointPushed</h4>
+  <div class="markdown level1 summary"><p>Raised when a point is pushed to a Direct graph, carrying the new point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Vector2&gt; OnPointPushed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_OnPushedPointRemoved.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.OnPushedPointRemoved%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1052">View Source</a>
+  </span>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_OnPushedPointRemoved" data-uid="SxmTools.UILineChart.Data.GraphDescription.OnPushedPointRemoved">OnPushedPointRemoved</h4>
+  <div class="markdown level1 summary"><p>Raised when a pushed point is removed from a Direct graph, carrying the removed point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action&lt;Vector2&gt; OnPushedPointRemoved</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<span class="xref">Vector2</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_OnPushedPointsCleared.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.OnPushedPointsCleared%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L1055">View Source</a>
+  </span>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_OnPushedPointsCleared" data-uid="SxmTools.UILineChart.Data.GraphDescription.OnPushedPointsCleared">OnPushedPointsCleared</h4>
+  <div class="markdown level1 summary"><p>Raised when all pushed points are cleared from a Direct graph.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event Action OnPushedPointsCleared</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action">Action</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

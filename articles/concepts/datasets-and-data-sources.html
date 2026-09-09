@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Datasets and data sources </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Datasets and data sources ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="datasets-and-data-sources">Datasets and data sources</h1>
+
+<h2 id="what-it-is">What it is</h2>
+<p>A chart draws <em>descriptions</em>: a <a class="xref" href="../../api/SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a> is one series with its data and styling, a <a class="xref" href="../../api/SxmTools.UILineChart.Data.ReferenceLineDescription.html">ReferenceLineDescription</a> is one horizontal marker. Both are <code>ScriptableObject</code> assets, so the same description can sit on several charts and be edited in the Inspector; the chart's <a class="xref" href="../../api/SxmTools.UILineChart.View.DataSettings.html">Data</a> group lists which ones it shows.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>A graph description is in one of two modes (<a class="xref" href="../../api/SxmTools.UILineChart.Data.GraphDescription.DataSourceMode.html">DataSourceMode</a>):</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Where points come from</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Predefined</td>
+<td>one of six built-in sources, configured on the asset</td>
+<td>authored charts, previews, demos</td>
+</tr>
+<tr>
+<td>Direct</td>
+<td><code>Push</code> calls from your code</td>
+<td>live data</td>
+</tr>
+</tbody>
+</table>
+<p>The predefined sources (<a class="xref" href="../../api/SxmTools.UILineChart.Data.GraphDescription.PredefinedDataSource.html">PredefinedDataSource</a>): <strong>Random</strong> — a random walk stepping along X; <strong>Manual</strong> — a hand-entered list of points; <strong>Curve</strong> — an <code>AnimationCurve</code> sampled into points; <strong>Waveform</strong> — a periodic wave (sine, square, triangle, sawtooth); <strong>File</strong> — points read from a JSON or CSV text asset; <strong>Derived</strong> — another graph transformed by an operation (moving average, change, total, derivative, integral). Derived graphs can chain: a derived graph may itself be the source of another.</p>
+<p>One property of a source matters beyond its shape: its <a class="xref" href="../../api/SxmTools.UILineChart.Data.Cardinality.html">Cardinality</a>. A <em>finite</em> source produces a fixed number of points and stops; an <em>infinite</em> one keeps going from its X origin — Random and Waveform let you choose, and a Direct graph is infinite by nature. <a href="playback.html">Playback</a> treats the two differently, and the description reports the result as <a class="xref" href="../../api/SxmTools.UILineChart.Data.GraphDescription.html#SxmTools_UILineChart_Data_GraphDescription_Cardinality">GraphDescription.Cardinality</a>.</p>
+<p>When you edit a description, every chart showing it refreshes. Styling changes are applied in place. A change to the data itself — the mode, the source or one of its parameters — makes the chart reload that series; the chart tells the two apart by hashing the data settings, so only an edit that would change the produced points triggers a reload.</p>
+<h2 id="what-it-is-not">What it is not</h2>
+<p>A description stores the recipe for its points, not the points themselves. A predefined source <em>generates</em> them on demand from its parameters; a Direct graph keeps only a bounded history of what was pushed (<a class="xref" href="../../api/SxmTools.UILineChart.Data.GraphDescription.html#SxmTools_UILineChart_Data_GraphDescription_PushedPointsHistoryLimit">PushedPointsHistoryLimit</a>). How many points a chart <em>draws</em> is the chart's points buffer (<a class="xref" href="../../api/SxmTools.UILineChart.View.DataSettings.html#SxmTools_UILineChart_View_DataSettings_PointsBufferLength">PointsBufferLength</a>, shared or per graph by <a class="xref" href="../../api/SxmTools.UILineChart.Model.PointsBufferMode.html">PointsBufferMode</a>), not a property of the description.</p>
+<h2 id="apply-it">Apply it</h2>
+<p>Configure a predefined source from code exactly as the Inspector would:</p>
+<pre><code class="lang-csharp">public static GraphDescription ConfigureAPredefinedSource()
+{
+    var graph = ScriptableObject.CreateInstance&lt;GraphDescription&gt;();
+    graph.Name = &quot;Wave&quot;;
+    graph.SelectedDataSource = GraphDescription.PredefinedDataSource.Waveform;
+    graph.WaveformData.Shape = GraphDescription.WaveShape.Sine;
+    graph.WaveformData.Frequency = 2f;
+    graph.WaveformData.Amplitude = 0.5f;
+    return graph;
+}
+</code></pre><h2 id="see-also">See also</h2>
+<ul>
+<li><a href="../code-first/feed-data-at-runtime.html">Feed data at runtime</a> — the Direct mode in practice.</li>
+<li><a href="../uxml-first/add-datasets.html">Add datasets</a> — the same assets from UI Builder.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Documentation~/articles/concepts/datasets-and-data-sources.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

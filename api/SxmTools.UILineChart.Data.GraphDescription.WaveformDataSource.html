@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class GraphDescription.WaveformDataSource </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class GraphDescription.WaveformDataSource ">
+    
+    <meta name="description" content="Settings for the waveform data source: a periodic wave sampled into points.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource">
+
+
+
+  <h1 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource" class="text-break">Class GraphDescription.WaveformDataSource</h1>
+  <div class="markdown level0 summary"><p>Settings for the waveform data source: a periodic wave sampled into points.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">GraphDescription.WaveformDataSource</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SxmTools.html">SxmTools</a>.<a class="xref" href="SxmTools.UILineChart.html">UILineChart</a>.<a class="xref" href="SxmTools.UILineChart.Data.html">Data</a></h6>
+  <h6><strong>Assembly</strong>: SxmTools.UILineChart.Data.dll</h6>
+  <h5 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public sealed class GraphDescription.WaveformDataSource</code></pre>
+  </div>
+  <h5 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>A numeric property outside its allowed range is rejected: an error is logged and the property keeps its current value.</p>
+</div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Amplitude.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Amplitude%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L481">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Amplitude_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Amplitude*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Amplitude" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Amplitude">Amplitude</h4>
+  <div class="markdown level1 summary"><p>Height of the wave from its midline to its peak.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Amplitude { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>Any value, in data units; a negative value flips the wave. Defaults to 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Cardinality.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Cardinality%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L418">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Cardinality_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Cardinality*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Cardinality" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Cardinality">Cardinality</h4>
+  <div class="markdown level1 summary"><p>Whether the wave stops at the end of its X range (Finite) or keeps going from the X origin (Infinite).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Cardinality Cardinality { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.Cardinality.html">Cardinality</a></td>
+        <td><p>Defaults to Finite.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Frequency.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Frequency%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L496">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Frequency_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Frequency*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Frequency" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Frequency">Frequency</h4>
+  <div class="markdown level1 summary"><p>Number of wave cycles per unit of X.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Frequency { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>0.0001 or more, in cycles per unit of X. Defaults to 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Offset.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Offset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L528">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Offset_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Offset*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Offset" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Offset">Offset</h4>
+  <div class="markdown level1 summary"><p>Vertical shift added to the whole wave.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Offset { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>Any value, in data units. Defaults to 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Phase.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Phase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L513">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Phase_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Phase*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Phase" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Phase">Phase</h4>
+  <div class="markdown level1 summary"><p>Horizontal shift of the wave, in degrees; 360 is one full cycle.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Phase { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>Any value, in degrees; 360 is one full cycle. Defaults to 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Shape.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Shape%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L403">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Shape_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Shape*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Shape" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Shape">Shape</h4>
+  <div class="markdown level1 summary"><p>Shape of the wave: sine, square, triangle or sawtooth.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphDescription.WaveShape Shape { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>.<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.WaveShape.html">WaveShape</a></td>
+        <td><p>Defaults to Sine.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Step.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Step%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L464">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Step_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Step*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_Step" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.Step">Step</h4>
+  <div class="markdown level1 summary"><p>Distance along X between neighbouring samples.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Step { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>0.001 or more, in data units. Defaults to 0.05.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XOrigin.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XOrigin%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L449">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XOrigin_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XOrigin*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XOrigin" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XOrigin">XOrigin</h4>
+  <div class="markdown level1 summary"><p>Where X starts when the wave is unlimited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float XOrigin { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>Any value, in data units. Defaults to 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XRange.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XRange%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L433">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XRange_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XRange*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XRange" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XRange">XRange</h4>
+  <div class="markdown level1 summary"><p>The X interval the wave spans when limited.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector2 XRange { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Vector2</span></td>
+        <td><p>Start and end X, in data units; for a finite wave an end before the start makes the source produce no data. Defaults to (0, 1).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XRangeLimit.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XRangeLimit%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L388">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XRangeLimit_" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XRangeLimit*"></a>
+  <h4 id="SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource_XRangeLimit" data-uid="SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.XRangeLimit">XRangeLimit</h4>
+  <div class="markdown level1 summary"><p>How far the X Range slider reaches; sizes the slider only and never touches the data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float XRangeLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><p>Any value, in data units; it is stretched to cover the current range. Defaults to 1.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_Data_GraphDescription_WaveformDataSource.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/Data/GraphDescription.cs/#L365" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

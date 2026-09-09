@@ -1,0 +1,1488 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class LineChart </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class LineChart ">
+    
+    <meta name="description" content="Root UI Toolkit control that draws one or more graph series with a grid, axis labels, a legend and point tooltips. The single public entry point of the package: author it in UXML or UI Builder, or drive it from code after calling .">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SxmTools.UILineChart.View.LineChart">
+
+
+
+  <h1 id="SxmTools_UILineChart_View_LineChart" data-uid="SxmTools.UILineChart.View.LineChart" class="text-break">Class LineChart</h1>
+  <div class="markdown level0 summary"><p>Root UI Toolkit control that draws one or more graph series with a grid, axis labels, a legend and point tooltips.
+The single public entry point of the package: author it in UXML or UI Builder, or drive it from code after calling <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Init">Init()</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">CallbackEventHandler</span></div>
+    <div class="level2"><span class="xref">Focusable</span></div>
+    <div class="level3"><span class="xref">VisualElement</span></div>
+    <div class="level4"><span class="xref">LineChart</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SxmTools.html">SxmTools</a>.<a class="xref" href="SxmTools.UILineChart.html">UILineChart</a>.<a class="xref" href="SxmTools.UILineChart.View.html">View</a></h6>
+  <h6><strong>Assembly</strong>: SxmTools.UILineChart.View.dll</h6>
+  <h5 id="SxmTools_UILineChart_View_LineChart_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[UxmlElement]
+public sealed class LineChart : VisualElement</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart__ctor.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1740">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart__ctor_" data-uid="SxmTools.UILineChart.View.LineChart.#ctor*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart__ctor" data-uid="SxmTools.UILineChart.View.LineChart.#ctor">LineChart()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LineChart()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Advanced.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Advanced%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L879">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Advanced_" data-uid="SxmTools.UILineChart.View.LineChart.Advanced*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Advanced" data-uid="SxmTools.UILineChart.View.LineChart.Advanced">Advanced</h4>
+  <div class="markdown level1 summary"><p>Advanced settings: automatic initialization and the chrome <code>Scale</code> multiplier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AdvancedSettings Advanced { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.View.AdvancedSettings.html">AdvancedSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Axis.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Axis%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L501">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Axis_" data-uid="SxmTools.UILineChart.View.LineChart.Axis*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Axis" data-uid="SxmTools.UILineChart.View.LineChart.Axis">Axis</h4>
+  <div class="markdown level1 summary"><p>Axis settings: value distribution, label formatting and the two axis captions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AxisSettings Axis { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.View.AxisSettings.html">AxisSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Data.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Data%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L560">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Data_" data-uid="SxmTools.UILineChart.View.LineChart.Data*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Data" data-uid="SxmTools.UILineChart.View.LineChart.Data">Data</h4>
+  <div class="markdown level1 summary"><p>Data settings: the graphs and reference lines shown, the points buffer, and playback.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSettings Data { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.View.DataSettings.html">DataSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Graphs.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Graphs%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1014">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Graphs_" data-uid="SxmTools.UILineChart.View.LineChart.Graphs*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Graphs" data-uid="SxmTools.UILineChart.View.LineChart.Graphs">Graphs</h4>
+  <div class="markdown level1 summary"><p>The graph descriptions currently shown on the chart, in draw order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;GraphDescription&gt; Graphs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Grid.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Grid%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L71">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Grid_" data-uid="SxmTools.UILineChart.View.LineChart.Grid*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Grid" data-uid="SxmTools.UILineChart.View.LineChart.Grid">Grid</h4>
+  <div class="markdown level1 summary"><p>Grid appearance settings: the number of columns and rows, and the axis line style.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GridSettings Grid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.View.GridSettings.html">GridSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Legend.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Legend%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L841">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Legend_" data-uid="SxmTools.UILineChart.View.LineChart.Legend*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Legend" data-uid="SxmTools.UILineChart.View.LineChart.Legend">Legend</h4>
+  <div class="markdown level1 summary"><p>Legend settings: visibility, side, alignment, offset and the header and entry text styles.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LegendSettings Legend { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.View.LegendSettings.html">LegendSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_PointTooltip.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.PointTooltip%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L687">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_PointTooltip_" data-uid="SxmTools.UILineChart.View.LineChart.PointTooltip*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_PointTooltip" data-uid="SxmTools.UILineChart.View.LineChart.PointTooltip">PointTooltip</h4>
+  <div class="markdown level1 summary"><p>Point tooltip settings: whether the hover tooltip is shown, its offset and its axis projections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointTooltipSettings PointTooltip { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.View.PointTooltipSettings.html">PointTooltipSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_ReferenceLines.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.ReferenceLines%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1078">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_ReferenceLines_" data-uid="SxmTools.UILineChart.View.LineChart.ReferenceLines*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_ReferenceLines" data-uid="SxmTools.UILineChart.View.LineChart.ReferenceLines">ReferenceLines</h4>
+  <div class="markdown level1 summary"><p>The reference-line descriptions currently shown on the chart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;ReferenceLineDescription&gt; ReferenceLines { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="SxmTools.UILineChart.Data.ReferenceLineDescription.html">ReferenceLineDescription</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+</h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_AddGraph_SxmTools_UILineChart_Data_GraphDescription_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.AddGraph(SxmTools.UILineChart.Data.GraphDescription)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1019">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_AddGraph_" data-uid="SxmTools.UILineChart.View.LineChart.AddGraph*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_AddGraph_SxmTools_UILineChart_Data_GraphDescription_" data-uid="SxmTools.UILineChart.View.LineChart.AddGraph(SxmTools.UILineChart.Data.GraphDescription)">AddGraph(GraphDescription)</h4>
+  <div class="markdown level1 summary"><p>Appends a graph to the chart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddGraph(GraphDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The graph to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code class="paramref">description</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_AddReferenceLine_SxmTools_UILineChart_Data_ReferenceLineDescription_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.AddReferenceLine(SxmTools.UILineChart.Data.ReferenceLineDescription)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1083">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_AddReferenceLine_" data-uid="SxmTools.UILineChart.View.LineChart.AddReferenceLine*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_AddReferenceLine_SxmTools_UILineChart_Data_ReferenceLineDescription_" data-uid="SxmTools.UILineChart.View.LineChart.AddReferenceLine(SxmTools.UILineChart.Data.ReferenceLineDescription)">AddReferenceLine(ReferenceLineDescription)</h4>
+  <div class="markdown level1 summary"><p>Appends a reference line to the chart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddReferenceLine(ReferenceLineDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.ReferenceLineDescription.html">ReferenceLineDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The reference line to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code class="paramref">description</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_ClearGraphs.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.ClearGraphs%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1068">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_ClearGraphs_" data-uid="SxmTools.UILineChart.View.LineChart.ClearGraphs*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_ClearGraphs" data-uid="SxmTools.UILineChart.View.LineChart.ClearGraphs">ClearGraphs()</h4>
+  <div class="markdown level1 summary"><p>Removes every graph from the chart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearGraphs()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_ClearReferenceLines.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.ClearReferenceLines%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1131">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_ClearReferenceLines_" data-uid="SxmTools.UILineChart.View.LineChart.ClearReferenceLines*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_ClearReferenceLines" data-uid="SxmTools.UILineChart.View.LineChart.ClearReferenceLines">ClearReferenceLines()</h4>
+  <div class="markdown level1 summary"><p>Removes every reference line from the chart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearReferenceLines()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_CopyAppearanceTo_SxmTools_UILineChart_View_LineChart_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.CopyAppearanceTo(SxmTools.UILineChart.View.LineChart)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L2501">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_CopyAppearanceTo_" data-uid="SxmTools.UILineChart.View.LineChart.CopyAppearanceTo*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_CopyAppearanceTo_SxmTools_UILineChart_View_LineChart_" data-uid="SxmTools.UILineChart.View.LineChart.CopyAppearanceTo(SxmTools.UILineChart.View.LineChart)">CopyAppearanceTo(LineChart)</h4>
+  <div class="markdown level1 summary"><p>Copies this chart's appearance — grid, axis, point tooltip, legend and points buffer — onto an already-initialized <code class="paramref">other</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyAppearanceTo(LineChart other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.View.LineChart.html">LineChart</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The initialized chart to copy this chart's appearance into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code class="paramref">other</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code class="paramref">other</code> is this chart.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p><code class="paramref">other</code> has not been initialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_CopyTo_SxmTools_UILineChart_View_LineChart_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.CopyTo(SxmTools.UILineChart.View.LineChart)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L582">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_CopyTo_" data-uid="SxmTools.UILineChart.View.LineChart.CopyTo*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_CopyTo_SxmTools_UILineChart_View_LineChart_" data-uid="SxmTools.UILineChart.View.LineChart.CopyTo(SxmTools.UILineChart.View.LineChart)">CopyTo(LineChart)</h4>
+  <div class="markdown level1 summary"><p>Copies this chart's datasets and appearance onto <code class="paramref">other</code>, initializing it first if it has not been initialized yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(LineChart other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.View.LineChart.html">LineChart</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The chart to copy this chart's datasets and appearance into.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code class="paramref">other</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p><code class="paramref">other</code> is this chart.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Dispose.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Dispose%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L2208">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Dispose_" data-uid="SxmTools.UILineChart.View.LineChart.Dispose*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Dispose" data-uid="SxmTools.UILineChart.View.LineChart.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Detaches the chart from its model and releases its rendering meshes and event subscriptions. Call once the chart is no longer used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Init.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Init%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1856">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Init_" data-uid="SxmTools.UILineChart.View.LineChart.Init*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Init" data-uid="SxmTools.UILineChart.View.LineChart.Init">Init()</h4>
+  <div class="markdown level1 summary"><p>Builds the chart's model from its authored settings and datasets and makes it live. Call once before driving
+the chart from code; a chart left to initialize itself (see <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Advanced">Advanced</a>) does this when it attaches to a panel.
+A second call logs a warning and keeps the first initialization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Init()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_InsertGraph_System_Int32_SxmTools_UILineChart_Data_GraphDescription_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.InsertGraph(System.Int32%2CSxmTools.UILineChart.Data.GraphDescription)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1027">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_InsertGraph_" data-uid="SxmTools.UILineChart.View.LineChart.InsertGraph*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_InsertGraph_System_Int32_SxmTools_UILineChart_Data_GraphDescription_" data-uid="SxmTools.UILineChart.View.LineChart.InsertGraph(System.Int32,SxmTools.UILineChart.Data.GraphDescription)">InsertGraph(int, GraphDescription)</h4>
+  <div class="markdown level1 summary"><p>Inserts a graph at <code class="paramref">index</code>, shifting later graphs along.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertGraph(int index, GraphDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Where to insert, in [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count].</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The graph to insert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code class="paramref">description</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code class="paramref">index</code> is outside [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_InsertReferenceLine_System_Int32_SxmTools_UILineChart_Data_ReferenceLineDescription_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.InsertReferenceLine(System.Int32%2CSxmTools.UILineChart.Data.ReferenceLineDescription)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1090">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_InsertReferenceLine_" data-uid="SxmTools.UILineChart.View.LineChart.InsertReferenceLine*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_InsertReferenceLine_System_Int32_SxmTools_UILineChart_Data_ReferenceLineDescription_" data-uid="SxmTools.UILineChart.View.LineChart.InsertReferenceLine(System.Int32,SxmTools.UILineChart.Data.ReferenceLineDescription)">InsertReferenceLine(int, ReferenceLineDescription)</h4>
+  <div class="markdown level1 summary"><p>Inserts a reference line at <code class="paramref">index</code>, shifting later lines along.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InsertReferenceLine(int index, ReferenceLineDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Where to insert, in [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_ReferenceLines">ReferenceLines</a>.Count].</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.ReferenceLineDescription.html">ReferenceLineDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The reference line to insert.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code class="paramref">description</code> is <code>null</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code class="paramref">index</code> is outside [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_ReferenceLines">ReferenceLines</a>.Count].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_IsPlaying_System_Int32_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.IsPlaying(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L934">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_IsPlaying_" data-uid="SxmTools.UILineChart.View.LineChart.IsPlaying*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_IsPlaying_System_Int32_" data-uid="SxmTools.UILineChart.View.LineChart.IsPlaying(System.Int32)">IsPlaying(int)</h4>
+  <div class="markdown level1 summary"><p>Whether the graph at <code class="paramref">graphIndex</code> is currently being filled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPlaying(int graphIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">graphIndex</span></td>
+        <td><p>Index of the graph in <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>, in [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> while that graph is filling; otherwise <code>false</code>, including before the chart is initialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code class="paramref">graphIndex</code> is outside [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Play.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Play%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L908">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Play_" data-uid="SxmTools.UILineChart.View.LineChart.Play*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Play" data-uid="SxmTools.UILineChart.View.LineChart.Play">Play()</h4>
+  <div class="markdown level1 summary"><p>Starts filling every graph from its data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Play()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The chart has not been initialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Play_System_Int32_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Play(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L919">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Play_" data-uid="SxmTools.UILineChart.View.LineChart.Play*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Play_System_Int32_" data-uid="SxmTools.UILineChart.View.LineChart.Play(System.Int32)">Play(int)</h4>
+  <div class="markdown level1 summary"><p>Starts filling the graph at <code class="paramref">graphIndex</code> from its data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Play(int graphIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">graphIndex</span></td>
+        <td><p>Index of the graph in <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>, in [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The chart has not been initialized.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code class="paramref">graphIndex</code> is outside [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_RemoveGraph_SxmTools_UILineChart_Data_GraphDescription_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.RemoveGraph(SxmTools.UILineChart.Data.GraphDescription)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1042">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_RemoveGraph_" data-uid="SxmTools.UILineChart.View.LineChart.RemoveGraph*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_RemoveGraph_SxmTools_UILineChart_Data_GraphDescription_" data-uid="SxmTools.UILineChart.View.LineChart.RemoveGraph(SxmTools.UILineChart.Data.GraphDescription)">RemoveGraph(GraphDescription)</h4>
+  <div class="markdown level1 summary"><p>Removes <code class="paramref">description</code> from the chart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveGraph(GraphDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.GraphDescription.html">GraphDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The graph to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if it was found and removed; <code>false</code> if it was not on the chart.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code class="paramref">description</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_RemoveGraphAt_System_Int32_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.RemoveGraphAt(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1058">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_RemoveGraphAt_" data-uid="SxmTools.UILineChart.View.LineChart.RemoveGraphAt*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_RemoveGraphAt_System_Int32_" data-uid="SxmTools.UILineChart.View.LineChart.RemoveGraphAt(System.Int32)">RemoveGraphAt(int)</h4>
+  <div class="markdown level1 summary"><p>Removes the graph at <code class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveGraphAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index of the graph in <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>, in [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code class="paramref">index</code> is outside [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_RemoveReferenceLine_SxmTools_UILineChart_Data_ReferenceLineDescription_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.RemoveReferenceLine(SxmTools.UILineChart.Data.ReferenceLineDescription)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1105">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_RemoveReferenceLine_" data-uid="SxmTools.UILineChart.View.LineChart.RemoveReferenceLine*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_RemoveReferenceLine_SxmTools_UILineChart_Data_ReferenceLineDescription_" data-uid="SxmTools.UILineChart.View.LineChart.RemoveReferenceLine(SxmTools.UILineChart.Data.ReferenceLineDescription)">RemoveReferenceLine(ReferenceLineDescription)</h4>
+  <div class="markdown level1 summary"><p>Removes <code class="paramref">description</code> from the chart.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemoveReferenceLine(ReferenceLineDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SxmTools.UILineChart.Data.ReferenceLineDescription.html">ReferenceLineDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The reference line to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td><p><code>true</code> if it was found and removed; <code>false</code> if it was not on the chart.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p><code class="paramref">description</code> is <code>null</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_RemoveReferenceLineAt_System_Int32_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.RemoveReferenceLineAt(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L1121">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_RemoveReferenceLineAt_" data-uid="SxmTools.UILineChart.View.LineChart.RemoveReferenceLineAt*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_RemoveReferenceLineAt_System_Int32_" data-uid="SxmTools.UILineChart.View.LineChart.RemoveReferenceLineAt(System.Int32)">RemoveReferenceLineAt(int)</h4>
+  <div class="markdown level1 summary"><p>Removes the reference line at <code class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveReferenceLineAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index of the reference line in <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_ReferenceLines">ReferenceLines</a>, in [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_ReferenceLines">ReferenceLines</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code class="paramref">index</code> is outside [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_ReferenceLines">ReferenceLines</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Restart.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Restart%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L914">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Restart_" data-uid="SxmTools.UILineChart.View.LineChart.Restart*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Restart" data-uid="SxmTools.UILineChart.View.LineChart.Restart">Restart()</h4>
+  <div class="markdown level1 summary"><p>Clears every graph and starts filling it again from the beginning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Restart()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The chart has not been initialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Restart_System_Int32_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Restart(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L929">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Restart_" data-uid="SxmTools.UILineChart.View.LineChart.Restart*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Restart_System_Int32_" data-uid="SxmTools.UILineChart.View.LineChart.Restart(System.Int32)">Restart(int)</h4>
+  <div class="markdown level1 summary"><p>Clears the graph at <code class="paramref">graphIndex</code> and starts filling it again from the beginning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Restart(int graphIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">graphIndex</span></td>
+        <td><p>Index of the graph in <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>, in [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The chart has not been initialized.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code class="paramref">graphIndex</code> is outside [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_RevealFiniteImmediately.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.RevealFiniteImmediately%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L941">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_RevealFiniteImmediately_" data-uid="SxmTools.UILineChart.View.LineChart.RevealFiniteImmediately*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_RevealFiniteImmediately" data-uid="SxmTools.UILineChart.View.LineChart.RevealFiniteImmediately">RevealFiniteImmediately()</h4>
+  <div class="markdown level1 summary"><p>Shows every graph that has a finite amount of data in full at once, skipping the fill animation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RevealFiniteImmediately()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The chart has not been initialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Stop.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Stop%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L911">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Stop_" data-uid="SxmTools.UILineChart.View.LineChart.Stop*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Stop" data-uid="SxmTools.UILineChart.View.LineChart.Stop">Stop()</h4>
+  <div class="markdown level1 summary"><p>Stops filling every graph, leaving the points revealed so far in place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The chart has not been initialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/new/feature/TASK-1/apiSpec/new?filename=SxmTools_UILineChart_View_LineChart_Stop_System_Int32_.md&amp;value=---%0Auid%3A%20SxmTools.UILineChart.View.LineChart.Stop(System.Int32)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Runtime/View/LineChart.cs/#L924">View Source</a>
+  </span>
+  <a id="SxmTools_UILineChart_View_LineChart_Stop_" data-uid="SxmTools.UILineChart.View.LineChart.Stop*"></a>
+  <h4 id="SxmTools_UILineChart_View_LineChart_Stop_System_Int32_" data-uid="SxmTools.UILineChart.View.LineChart.Stop(System.Int32)">Stop(int)</h4>
+  <div class="markdown level1 summary"><p>Stops filling the graph at <code class="paramref">graphIndex</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop(int graphIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></td>
+        <td><span class="parametername">graphIndex</span></td>
+        <td><p>Index of the graph in <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>, in [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td><p>The chart has not been initialized.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></td>
+        <td><p><code class="paramref">graphIndex</code> is outside [0, <a class="xref" href="SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>.Count).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

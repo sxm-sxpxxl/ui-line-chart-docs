@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Build a chart from code </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Build a chart from code ">
+    
+    
+      <link rel="shortcut icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <style>
+        h5.parameters + .table-responsive th:first-child,
+        h5.parameters + .table-responsive td:first-child,
+        h5.parameters + table th:first-child,
+        h5.parameters + table td:first-child,
+        h5.propertyValue + .table-responsive th:first-child,
+        h5.propertyValue + .table-responsive td:first-child,
+        h5.propertyValue + table th:first-child,
+        h5.propertyValue + table td:first-child,
+        h5.returns + .table-responsive th:first-child,
+        h5.returns + .table-responsive td:first-child,
+        h5.returns + table th:first-child,
+        h5.returns + table td:first-child,
+        h5.fieldValue + .table-responsive th:first-child,
+        h5.fieldValue + .table-responsive td:first-child,
+        h5.fieldValue + table th:first-child,
+        h5.fieldValue + table td:first-child,
+        h5.eventType + .table-responsive th:first-child,
+        h5.eventType + .table-responsive td:first-child,
+        h5.eventType + table th:first-child,
+        h5.eventType + table td:first-child,
+        h5.exceptions + .table-responsive th:first-child,
+        h5.exceptions + .table-responsive td:first-child,
+        h5.exceptions + table th:first-child,
+        h5.exceptions + table td:first-child,
+        h5.typeParameters + .table-responsive th:first-child,
+        h5.typeParameters + .table-responsive td:first-child,
+        h5.typeParameters + table th:first-child,
+        h5.typeParameters + table td:first-child {
+          white-space: nowrap;
+        }
+
+        h5.parameters + .table-responsive th:first-child a,
+        h5.parameters + .table-responsive td:first-child a,
+        h5.parameters + table th:first-child a,
+        h5.parameters + table td:first-child a,
+        h5.propertyValue + .table-responsive th:first-child a,
+        h5.propertyValue + .table-responsive td:first-child a,
+        h5.propertyValue + table th:first-child a,
+        h5.propertyValue + table td:first-child a,
+        h5.returns + .table-responsive th:first-child a,
+        h5.returns + .table-responsive td:first-child a,
+        h5.returns + table th:first-child a,
+        h5.returns + table td:first-child a,
+        h5.fieldValue + .table-responsive th:first-child a,
+        h5.fieldValue + .table-responsive td:first-child a,
+        h5.fieldValue + table th:first-child a,
+        h5.fieldValue + table td:first-child a,
+        h5.eventType + .table-responsive th:first-child a,
+        h5.eventType + .table-responsive td:first-child a,
+        h5.eventType + table th:first-child a,
+        h5.eventType + table td:first-child a,
+        h5.exceptions + .table-responsive th:first-child a,
+        h5.exceptions + .table-responsive td:first-child a,
+        h5.exceptions + table th:first-child a,
+        h5.exceptions + table td:first-child a,
+        h5.typeParameters + .table-responsive th:first-child a,
+        h5.typeParameters + .table-responsive td:first-child a,
+        h5.typeParameters + table th:first-child a,
+        h5.typeParameters + table td:first-child a {
+          display: inline;
+          word-break: normal;
+          overflow-wrap: normal;
+        }
+
+        h5.parameters + .table-responsive th:first-child wbr,
+        h5.parameters + .table-responsive td:first-child wbr,
+        h5.parameters + table th:first-child wbr,
+        h5.parameters + table td:first-child wbr,
+        h5.propertyValue + .table-responsive th:first-child wbr,
+        h5.propertyValue + .table-responsive td:first-child wbr,
+        h5.propertyValue + table th:first-child wbr,
+        h5.propertyValue + table td:first-child wbr,
+        h5.returns + .table-responsive th:first-child wbr,
+        h5.returns + .table-responsive td:first-child wbr,
+        h5.returns + table th:first-child wbr,
+        h5.returns + table td:first-child wbr,
+        h5.fieldValue + .table-responsive th:first-child wbr,
+        h5.fieldValue + .table-responsive td:first-child wbr,
+        h5.fieldValue + table th:first-child wbr,
+        h5.fieldValue + table td:first-child wbr,
+        h5.eventType + .table-responsive th:first-child wbr,
+        h5.eventType + .table-responsive td:first-child wbr,
+        h5.eventType + table th:first-child wbr,
+        h5.eventType + table td:first-child wbr,
+        h5.exceptions + .table-responsive th:first-child wbr,
+        h5.exceptions + .table-responsive td:first-child wbr,
+        h5.exceptions + table th:first-child wbr,
+        h5.exceptions + table td:first-child wbr,
+        h5.typeParameters + .table-responsive th:first-child wbr,
+        h5.typeParameters + .table-responsive td:first-child wbr,
+        h5.typeParameters + table th:first-child wbr,
+        h5.typeParameters + table td:first-child wbr {
+          display: none;
+        }
+      </style>
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="build-a-chart-from-code">Build a chart from code</h1>
+
+<p><strong>Goal:</strong> a <code>LineChart</code> created in C#, configured through its settings groups, initialized and added to a visual tree — showing the default graph.</p>
+<p><strong>Prerequisites:</strong> the package is installed (<a href="../getting-started.html">Getting started</a>) and you have a <code>VisualElement</code> to add the chart to (a <code>UIDocument</code>'s <code>rootVisualElement</code>, or any container).</p>
+<h2 id="steps">Steps</h2>
+<ol>
+<li>Create the control: <code>new LineChart()</code>. Nothing is drawn yet — the constructor only builds the element tree.</li>
+<li>Configure the groups you care about through the properties on the control. Each group is a plain object with documented properties; setting one applies it immediately: <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Grid">Grid</a>, <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Axis">Axis</a>, <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Legend">Legend</a>, and so on.</li>
+<li>Call <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Init">Init()</a>. It builds the chart's model from what you configured and makes the control live. The explicit call matters because you are about to drive the chart from code: the playback methods (<a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Play_">Play</a>, <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Stop_">Stop</a>, <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Restart_">Restart</a>) throw on a chart that is not initialized, and a chart left to initialize itself does so only on the tick after it attaches to a panel — too late for the line that follows. The dataset methods (<a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_AddGraph_">AddGraph</a> and its siblings) are the exception: they record the change and take effect at <code>Init()</code>.</li>
+<li>Add the control to your tree. An initialized chart attaches without initializing again. If the control has to be in the tree before you are ready to call <code>Init()</code>, turn <a class="xref" href="../../api/SxmTools.UILineChart.View.AdvancedSettings.html#SxmTools_UILineChart_View_AdvancedSettings_AutoInitialize">Advanced.AutoInitialize</a> off so the tree does not initialize it for you.</li>
+</ol>
+<pre><code class="lang-csharp">public static LineChart BuildAChart(VisualElement parent)
+{
+    var chart = new LineChart();
+    chart.Grid.ColumnsRows = new Vector2Int(6, 4);
+    chart.Legend.Side = LegendSide.Right;
+    chart.Axis.XAxisCaption = &quot;Time&quot;;
+    chart.Axis.YAxisCaption = &quot;Value&quot;;
+    chart.Init();
+    parent.Add(chart);
+    return chart;
+}
+</code></pre><h2 id="result">Result</h2>
+<p>A chart with a 6×4 grid, the legend to the right of the plot, &quot;Time&quot; and &quot;Value&quot; as axis captions, and the built-in default graph drawn across it — the placeholder every chart shows until it gets datasets of its own, the same one a <code>LineChart</code> dropped into UI Builder shows.</p>
+<p>A chart you only display does not need you to call <code>Init()</code> at all: with <a class="xref" href="../../api/SxmTools.UILineChart.View.AdvancedSettings.html#SxmTools_UILineChart_View_AdvancedSettings_AutoInitialize">Advanced.AutoInitialize</a> on (the default) it initializes itself when it attaches to a runtime panel, which is how the UXML-first track works.</p>
+<h2 id="next">Next</h2>
+<ul>
+<li><a href="feed-data-at-runtime.html">Feed data at runtime</a> — replace the default graph with points your code produces.</li>
+<li><a href="../concepts/datasets-and-data-sources.html">Datasets and data sources</a> — what a graph description is and where its points come from.</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-1/Documentation~/articles/code-first/build-a-chart.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

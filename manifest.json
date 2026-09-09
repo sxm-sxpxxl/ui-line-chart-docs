@@ -1,0 +1,619 @@
+{
+  "source_base_path": "D:/Unity Projects/ui-line-chart/Packages/com.sxm-tools.ui-line-chart/Documentation~",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.ActivityState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.ActivityState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.Cardinality.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.Cardinality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.FillMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.FillMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.CurveDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.CurveDataSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.DataSourceMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.DataSourceMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.DerivedDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.DerivedDataSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.FileDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.FileDataSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.FileFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.FileFormat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.GraphOperation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.GraphOperation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.ManualDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.ManualDataSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.PredefinedDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.PredefinedDataSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.RandomDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.RandomDataSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.WaveShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.WaveShape.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.WaveformDataSource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphDescription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.GraphUpdateMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.GraphUpdateMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.ReferenceLineDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.ReferenceLineDescription.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Data.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.AxisAlign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.AxisAlign.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.AxisDistributionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.AxisDistributionType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.AxisVisibility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.AxisVisibility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.CaptionAlign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.CaptionAlign.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.DecimalPlaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.DecimalPlaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.Fill.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.Fill.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.LegendSide.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.LegendSide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.LegendVisibility.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.LegendVisibility.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.PointsBufferMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.PointsBufferMode.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.Shape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.Shape.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.Stroke.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.Stroke.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.TextStyleAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.TextStyleAttributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.TextStylesAttributes.Entry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.TextStylesAttributes.Entry.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.TextStylesAttributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.TextStylesAttributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.TextStylesLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.TextStylesLibrary.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.Model.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.Model.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.View.AdvancedSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.View.AdvancedSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.View.AxisSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.View.AxisSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.View.DataSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.View.DataSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.View.GridSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.View.GridSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.View.LegendSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.View.LegendSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.View.LineChart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.View.LineChart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.View.PointTooltipSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.View.PointTooltipSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SxmTools.UILineChart.View.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SxmTools.UILineChart.View.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/code-first/build-a-chart.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/code-first/build-a-chart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/code-first/feed-data-at-runtime.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/code-first/feed-data-at-runtime.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/code-first/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/code-first/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/code-first/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/concepts/datasets-and-data-sources.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concepts/datasets-and-data-sources.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/concepts/playback.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concepts/playback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/concepts/scale.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concepts/scale.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/concepts/text-styles.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concepts/text-styles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/concepts/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/concepts/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/concepts/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/known-issues.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/known-issues.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/uxml-first/add-datasets.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/uxml-first/add-datasets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/uxml-first/build-a-chart.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/uxml-first/build-a-chart.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/uxml-first/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/uxml-first/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/uxml-first/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
