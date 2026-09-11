@@ -206,6 +206,7 @@
 </table>
 <p>From code you drive the same machinery per chart or per graph: <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Play_">Play</a>, <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Stop_">Stop</a>, <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Restart_">Restart</a> (the <code>int</code> overloads take an index into <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_Graphs">Graphs</a>), and <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_IsPlaying_">IsPlaying</a> to tell whether a graph is still filling. <a class="xref" href="../../api/SxmTools.UILineChart.View.LineChart.html#SxmTools_UILineChart_View_LineChart_RevealFiniteImmediately">RevealFiniteImmediately</a> shows every finite graph in full and skips the animation — it is what the chart does outside play mode so the editor preview is never empty.</p>
 <p>Playback methods need an initialized chart; before <code>Init()</code> they throw.</p>
+<p>The waiting between ticks runs on <a href="https://github.com/Cysharp/UniTask">UniTask</a> when the project has that package installed, and on <code>System.Threading.Tasks.Task</code> when it does not. Nothing to configure either way: installing UniTask is enough, and it spares playback the allocations a <code>Task</code> delay makes.</p>
 <h2 id="what-it-is-not">What it is not</h2>
 <p><code>TickRate</code> is a period, not a frequency: <code>0.05</code> means a tick every 50 ms, twenty ticks a second. And playback is not the same as the points buffer — the buffer caps how many points are <em>kept</em>, playback decides how fast they <em>appear</em>.</p>
 <h2 id="apply-it">Apply it</h2>
@@ -233,7 +234,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/feature/TASK-40/Documentation~/articles/concepts/playback.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/sxm-sxpxxl/ui-line-chart/blob/master/Documentation~/articles/concepts/playback.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
