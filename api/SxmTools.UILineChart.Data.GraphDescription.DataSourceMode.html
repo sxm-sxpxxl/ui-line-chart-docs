@@ -15,6 +15,13 @@
       <link rel="stylesheet" href="../styles/docfx.css">
       <link rel="stylesheet" href="../styles/main.css">
       <style>
+        /* The mark is wider than it is tall, so it fills its square box and ends up
+           against the first menu item - and against that item's plate when it is the
+           selected one. The room has to come from here: padding it inside the drawing
+           would only shrink the mark. */
+        #logo {
+          margin-right: 18px;
+        }
         h5.parameters + .table-responsive th:first-child,
         h5.parameters + .table-responsive td:first-child,
         h5.parameters + table th:first-child,
