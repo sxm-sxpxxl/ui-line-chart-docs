@@ -596,6 +596,26 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "assets/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "assets/favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "assets/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "assets/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
