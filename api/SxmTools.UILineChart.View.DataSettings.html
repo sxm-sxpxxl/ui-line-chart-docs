@@ -19,14 +19,13 @@
            against the first menu item - and against that item's plate when it is the
            selected one. The room has to come from here: padding it inside the drawing
            would only shrink the mark. */
-        /* The brand link is half again as tall as the mark, and an inline image sits at
-           the top of it, which leaves the mark riding above the menu beside it. */
+        /* The brand link is half again as tall as the mark, and an inline image sits at the
+           top of it, which leaves the mark riding above the menu beside it. The room before
+           that menu belongs to the link rather than to the image: put it on the image and
+           the link's own box grows past the mark, which shows when the link is pressed. */
         .navbar-brand {
           display: flex;
           align-items: center;
-        }
-
-        #logo {
           margin-right: 18px;
         }
         h5.parameters + .table-responsive th:first-child,
