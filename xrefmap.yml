@@ -1298,18 +1298,6 @@ references:
   commentId: F:SxmTools.UILineChart.Model.DecimalPlaces._3
   fullName: SxmTools.UILineChart.Model.DecimalPlaces._3
   nameWithType: DecimalPlaces._3
-- uid: SxmTools.UILineChart.Model.DecimalPlaces._4
-  name: _4
-  href: api/SxmTools.UILineChart.Model.DecimalPlaces.html#SxmTools_UILineChart_Model_DecimalPlaces__4
-  commentId: F:SxmTools.UILineChart.Model.DecimalPlaces._4
-  fullName: SxmTools.UILineChart.Model.DecimalPlaces._4
-  nameWithType: DecimalPlaces._4
-- uid: SxmTools.UILineChart.Model.DecimalPlaces._5
-  name: _5
-  href: api/SxmTools.UILineChart.Model.DecimalPlaces.html#SxmTools_UILineChart_Model_DecimalPlaces__5
-  commentId: F:SxmTools.UILineChart.Model.DecimalPlaces._5
-  fullName: SxmTools.UILineChart.Model.DecimalPlaces._5
-  nameWithType: DecimalPlaces._5
 - uid: SxmTools.UILineChart.Model.Fill
   name: Fill
   href: api/SxmTools.UILineChart.Model.Fill.html
